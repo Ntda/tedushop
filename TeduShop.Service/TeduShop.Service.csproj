@@ -47,14 +47,6 @@
       <Project>{b98eeb6e-3171-4b14-b882-495a1a90c99a}</Project>
       <Name>TeduShop.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TeduShop.Data\TeduShop.Data.csproj">
-      <Project>{f6f8c382-2254-4566-b0e8-ae183b6470c8}</Project>
-      <Name>TeduShop.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TeduShop.Model\TeduShop.Model.csproj">
-      <Project>{444a7775-98f5-4ea6-86a9-6ea601622726}</Project>
-      <Name>TeduShop.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
