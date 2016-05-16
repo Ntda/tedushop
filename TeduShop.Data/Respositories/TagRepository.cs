@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿ using TeduShop.Data.Infrastructure;
+using TeduShop.Model.Models;
 
-namespace TeduShop.Data.Respositories
+namespace TeduShop.Data.Repositories
 {
-    class TagRepository
-    {
-    }
-    public interface ITagRepository
+    public interface ITagRepository : IRepository<Tag>
     {
     }
 
-    public class SystemConfigRepository : RepositoryBase<Product>, ITagRepository
+    public class TagRepository : RepositoryBase<Tag>, ITagRepository
     {
-        public SystemConfigRepository(IDbFactory dbFactory) : base(dbFactory)
+        public TagRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }
