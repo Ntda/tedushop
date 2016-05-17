@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201605160113223_InitialDB1.Designer.cs">
       <DependentUpon>201605160113223_InitialDB1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605170245344_AddErrorTable.cs" />
+    <Compile Include="Migrations\201605170245344_AddErrorTable.Designer.cs">
+      <DependentUpon>201605170245344_AddErrorTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Respositories\FooterRepository.cs" />
@@ -91,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605160113223_InitialDB1.resx">
       <DependentUpon>201605160113223_InitialDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605170245344_AddErrorTable.resx">
+      <DependentUpon>201605170245344_AddErrorTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
