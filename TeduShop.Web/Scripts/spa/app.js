@@ -5,6 +5,7 @@ myApp.controller("schoolController", schoolController)
 myApp.controller("StudentController", StudentController);
 myApp.controller("TeacherController", TeacherController);
 myApp.service("Validator", Validator);
+myApp.directive("teduShopDirective", teduShopDirective);
 myApp.$inject = ['$scope'];
 schoolController.$inject["$scope", "Validator"];
 
@@ -35,5 +36,12 @@ function Validator($window) {
             alert("So le");
         else
             alert("Solchan");
+    }
+}
+
+function teduShopDirective() {
+    return {
+        restrick:"A",
+        templateUrl:"/Scripts/spa/teduShopDirective.html"
     }
 }
