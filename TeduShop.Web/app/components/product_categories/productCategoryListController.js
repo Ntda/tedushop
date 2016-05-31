@@ -7,6 +7,7 @@
         $scope.pagesCount = 0;
         $scope.getProductCagories = getProductCagories;
         $scope.keyword = '';
+       
         $scope.search = function () {
             getProductCagories();
         }

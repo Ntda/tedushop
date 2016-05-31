@@ -22,6 +22,7 @@ namespace TeduShop.Data.Infrastructure
 
         public void Commit()
         {
+            dbContext = DbContext;
             dbContext.SaveChanges();
         }
     }
