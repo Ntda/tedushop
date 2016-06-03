@@ -10,6 +10,7 @@ using TeduShop.Service;
 using TeduShop.Web.Infrastructure.Core;
 using TeduShop.Web.Models;
 using TeduShop.Web.Infrastructure.Extensions;
+using System.Web.Script.Serialization;
 
 namespace TeduShop.Web.Api
 {
@@ -154,6 +155,34 @@ namespace TeduShop.Web.Api
 
                     var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(oldProductCategory);
                     response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                }
+                return response;
+            });
+        }
+
+        [Route("deletemulti")]
+        [HttpDelete]
+        [AllowAnonymous]
+        public HttpResponseMessage DeleteMuti(HttpRequestMessage request, string checkedProductCategories)
+        {
+
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var listProductCategory = new JavaScriptSerializer().Deserialize < List<int>>(checkedProductCategories);
+                    foreach (var item in listProductCategory)
+                    {
+                        _productCategoryService.Delete(item);
+                    }
+                    _productCategoryService.Save();
+
+                    response = request.CreateResponse(HttpStatusCode.OK, listProductCategory.Count);
                 }
                 return response;
             });
