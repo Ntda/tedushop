@@ -18,12 +18,12 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" novalidate name="frmAddproduct" role="form" ng-submit="Addproduct()">
+        <form class="form-horizontal" novalidate name="frmAddproduct" role="form" ng-submit="AddProduct()">
             <div class="box-body">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Tên sản phẩm</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="name" ng-maxlength="256" required ng-model="product.Name">
+                        <input type="text" class="form-control" ng-change="GetSeoTitle()" name="name" ng-maxlength="256" required ng-model="product.Name">
                         <span ng-show="frmAddproduct.name.$invalid" class="has-error">Bạn phải nhập tên danh mục</span>
                         <span ng-show="frmAddproduct.name.$error.maxlength" class="has-error">Tên danh mục không quá 256 ký tự</span>
                     </div>
@@ -56,14 +56,14 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Bảo hành</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" name="warranty" ng-model="product.DisplayOrder">(tháng)
+                        <input type="number" class="form-control" name="warranty" ng-model="product.Warranty">(tháng)
                         
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Giá</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" required name="price" ng-model="product.DisplayOrder">
+                        <input type="number" class="form-control" required name="price" ng-model="product.Price">
                         <span ng-show="frmAddproduct.price.$invalid" class="has-error">Bạn phải nhập giá sản phẩm</span>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Giá KM</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" name="promotionPrice" ng-model="product.DisplayOrder">
+                        <input type="number" class="form-control" name="promotionPrice" ng-model="product.PromotionPrice">
                         
                     </div>
                 </div>
@@ -81,13 +81,19 @@
                     <div class="col-sm-10">
                         <input type="text" class="form-control"  ng-maxlength="256" name="image" ng-model="product.Image">
                         <span ng-show="frmAddproduct.image.$error.maxlength">Tên ảnh không quá 256 ký tự</span>
-                        <button class="btn btn-default" ng-click="ChooseImage()">Chọn ảnh</button>
+                        <button class="btn btn-default" type="button" ng-click="ChooseImage()">Chọn ảnh</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Mô tả sản phẩm</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" ckeditor="ckeditorOptions" name="content" ng-model="product.Content" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tags</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="tags" ng-model="product.Tags">
                     </div>
                 </div>
                 <div class="form-group">

@@ -127,7 +127,7 @@ namespace TeduShop.Web.Api
                     var dbProduct = _productService.GetById(productVm.ID);
                     dbProduct.UpdateProduct(productVm);
                     dbProduct.UpdatedDate = DateTime.Now;
-                    _productService.Add(dbProduct);
+                    _productService.Update(dbProduct);
                     _productService.Save();
 
                     var responseData = Mapper.Map<Product, ProductViewModel>(dbProduct);
