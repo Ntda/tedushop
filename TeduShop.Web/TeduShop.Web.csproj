@@ -3634,6 +3634,7 @@
     <Content Include="Assets\admin\libs\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Assets\admin\libs\ckfinder\translations.txt" />
     <Content Include="Assets\admin\libs\fastclick\lib\fastclick.js" />
+    <Content Include="Assets\admin\libs\jQuery2.2.0\jQuery-2.2.0.min.js" />
     <Content Include="Assets\admin\libs\jquery\AUTHORS.txt" />
     <Content Include="Assets\admin\libs\jquery\dist\jquery.js" />
     <Content Include="Assets\admin\libs\jquery\dist\jquery.min.js" />
