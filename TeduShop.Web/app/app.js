@@ -12,7 +12,7 @@
         $stateProvider
             .state('base', {
                 url: '',
-                templateUrl: 'app/shared/views/baseView.html',
+                templateUrl: '/app/shared/views/baseView.html',
                 asbtract:true
             })
             .state('login', {
@@ -27,6 +27,6 @@
                 controller: "homeController"
         });
 
-        $urlRouterProvider.otherwise('/admin');
+        $urlRouterProvider.otherwise('/login');
     }
 })();

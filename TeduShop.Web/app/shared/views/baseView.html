@@ -1,5 +1,5 @@
 ﻿<!-- Site wrapper -->
-<div class="wrapper">
+<div class="wrapper" >
     <header class="main-header">
         <!-- Logo -->
         <a href="#" class="logo">
@@ -104,7 +104,7 @@
                         </ul>
                     </li>
                     <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
+                    <li class="dropdown user user-menu" style="display:block;">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/Assets/admin/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <span class="hidden-xs">Alexander Pierce</span>
@@ -139,7 +139,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" ng-click="logout()" class="btn btn-default btn-flat">Đăng xuất</a>
+                                    <a href="javascript:void(0);" ng-click="logout()" class="btn btn-default btn-flat">Đăng xuất</a>
                                 </div>
                             </li>
                         </ul>
@@ -203,16 +203,14 @@
                         <li><a ui-sref="products"><i class="fa fa-circle-o"></i>Sản phẩm</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+              
             </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
     <!-- =============================================== -->
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" style="height:100%">
         <div ui-view></div>
         <!--<div ui-view></div> giong renderbody ben asp.net-->
     </div>

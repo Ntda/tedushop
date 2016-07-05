@@ -3,7 +3,7 @@
     loginController.$inject = ['$scope', '$state'];
     function loginController($scope, $state) {
         $scope.loginSubmit = function () {
-            $state.go('home');
+            $state.go('login');
         }
     }
 })(angular.module('tedushop'));
